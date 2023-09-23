@@ -1,0 +1,1 @@
+# hejcin_seminar_informatiky
