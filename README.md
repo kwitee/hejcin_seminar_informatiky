@@ -1,1 +1,1 @@
-# hejcin_seminar_informatiky
+Examples for the high school informatics seminar.
