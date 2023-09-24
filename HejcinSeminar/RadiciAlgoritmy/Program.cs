@@ -48,7 +48,7 @@ internal class Program
 
         // Řazení - algoritmus buble sort
         {
-            BubbleSortUkol.TestovaciFunkce();
+            // BubbleSortUkol.TestovaciFunkce();
         }
 
         Console.WriteLine("Stiskni libovolnou klávesu na ukončení programu.");
