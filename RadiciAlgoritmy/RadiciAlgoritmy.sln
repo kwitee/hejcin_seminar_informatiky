@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadiciAlgoritmy", "RadiciAlgoritmy\RadiciAlgoritmy.csproj", "{66C09B61-544E-4DBA-BFC6-B7B70825C6AA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opakovani", "Opakovani\Opakovani.csproj", "{17F1BF76-546B-4BDA-BA58-32BC1A85825E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordinace", "Ordinace\Ordinace.csproj", "{80B8AF4B-5B97-4418-BCCD-443E25214A79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadiciAlgoritmy", "RadiciAlgoritmy.csproj", "{66C09B61-544E-4DBA-BFC6-B7B70825C6AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

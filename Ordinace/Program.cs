@@ -62,7 +62,7 @@ internal class Program
         var jmeno = pacientUdaje[0];
         var vaha = double.Parse(pacientUdaje[1]);
         var vyska = double.Parse(pacientUdaje[2]);
-        var vek = int.Parse(pacientText[3]);
+        var vek = int.Parse(pacientUdaje[3]);
 
         return new Pacient(jmeno, vaha, vyska, vek);
     }
