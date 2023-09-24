@@ -4,21 +4,15 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        // Klíčové slovo var
+        // Výjimky
         {
-            // KlicoveSlovoVar.Ukazka();
+            // Vyjimky.CoJeToVyjimka();
+            // Vyjimky.TypyVyjimek();
+            // Vyjimky.VyhazovaniVyjimek();
+            // Vyjimky.OdchytavaniVyjimek();
         }
 
-        // Smycky
-        {
-            // Smycky.SmyckaWhile();
-            // Smycky.SmyckaFor();
-            // Smycky.SmyckaForeach();
-            // Smycky.KlicoveSlovoBreak();
-            // Smycky.KlicoveSlovoContinue();
-        }
-
-        // Vyhledavani zaznamu - samostatný úkol + práce s debuggerem
+        // Vyhledavani zaznamu - samostatný úkol
         {
             // VyhledavaniUkol.TestovaciFunkce();
         }
@@ -36,14 +30,6 @@ internal class Program
         // Zadání pole libovolné délky uživatelem - funkce split - samostatný úkol
         {
             // ZadejPoleUkol.ZadejPole();
-        }
-
-        // Výjimky
-        {
-            // Vyjimky.CoJeToVyjimka();
-            // Vyjimky.TypyVyjimek();
-            // Vyjimky.VyhazovaniVyjimek();
-            // Vyjimky.OdchytavaniVyjimek();
         }
 
         // Řazení - algoritmus buble sort
