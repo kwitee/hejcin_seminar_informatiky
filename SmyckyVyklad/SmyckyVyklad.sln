@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordinace", "Ordinace.csproj", "{6E4666DE-F5D7-43F0-ADF7-BC5154B3CAB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmyckyVyklad", "SmyckyVyklad.csproj", "{9FBB5F05-E3FD-4146-ADD3-B25FFA4E1DBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6E4666DE-F5D7-43F0-ADF7-BC5154B3CAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E4666DE-F5D7-43F0-ADF7-BC5154B3CAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E4666DE-F5D7-43F0-ADF7-BC5154B3CAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E4666DE-F5D7-43F0-ADF7-BC5154B3CAB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FBB5F05-E3FD-4146-ADD3-B25FFA4E1DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FBB5F05-E3FD-4146-ADD3-B25FFA4E1DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FBB5F05-E3FD-4146-ADD3-B25FFA4E1DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FBB5F05-E3FD-4146-ADD3-B25FFA4E1DBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1FBEB12A-F8FA-469D-9830-91DFCD04E8D3}
+		SolutionGuid = {89394AC6-416F-4F74-BBB2-787C38A358C4}
 	EndGlobalSection
 EndGlobal

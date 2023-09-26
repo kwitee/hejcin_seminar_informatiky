@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E4666DE-F5D7-43F0-ADF7-BC5154B3CAB7}</ProjectGuid>
+    <ProjectGuid>{9FBB5F05-E3FD-4146-ADD3-B25FFA4E1DBD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ordinace</RootNamespace>
-    <AssemblyName>Ordinace</AssemblyName>
+    <RootNamespace>SmyckyVyklad</RootNamespace>
+    <AssemblyName>SmyckyVyklad</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pacient.cs" />
+    <Compile Include="KlicoveSlovoVar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Smycky.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

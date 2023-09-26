@@ -1,41 +1,47 @@
-﻿namespace Ordinace;
-
-public class Pacient
+﻿namespace Ordinace
 {
-    public string Jmeno { get; }
-    public double Vaha { get; }
-    public double Vyska { get; }
-    public int Vek { get; }
-
-    public double Bmi
+    public class Pacient
     {
-        get
+        public string Jmeno { get; }
+        public double Vaha { get; }
+        public double Vyska { get; }
+        public int Vek { get; }
+
+        public double Bmi { get; }
+        public string KategorieRizikovosti { get; }
+
+        public Pacient(string jmeno, double vaha, double vyska, int vek)
         {
-            return Vaha / (Vyska * Vyska);
+            Jmeno = jmeno;
+            Vaha = vaha;
+            Vyska = vyska;
+            Vek = vek;
+
+            var vyskaVMetrech = vyska / 100;
+            Bmi = Vaha / (vyskaVMetrech * vyskaVMetrech);
+
+            KategorieRizikovosti = VyhodnotKategoriiRizikovosti(Bmi);
         }
-    }
 
-    public string KategorieRizikovosti
-    {
-        get
+        private static string VyhodnotKategoriiRizikovosti(double bmi)
         {
-            if (Bmi < 18.5)
+            if (bmi < 18.5)
             {
                 return "Podváha";
             }
-            else if (Bmi < 25)
+            else if (bmi < 25)
             {
                 return "Norma";
             }
-            else if (Bmi < 30)
+            else if (bmi < 30)
             {
                 return "Nadváha";
             }
-            else if (Bmi < 35)
+            else if (bmi < 35)
             {
                 return "Obezita (1. stupně)";
             }
-            else if (Bmi < 40)
+            else if (bmi < 40)
             {
                 return "Obezita (2. stupně)";
             }
@@ -44,13 +50,5 @@ public class Pacient
                 return "Obezita (3. stupně)";
             }
         }
-    }
-
-    public Pacient(string jmeno, double vaha, double vyska, int vek)
-    {
-        Jmeno = jmeno;
-        Vaha = vaha;
-        Vyska = vyska;
-        Vek = vek;
     }
 }
