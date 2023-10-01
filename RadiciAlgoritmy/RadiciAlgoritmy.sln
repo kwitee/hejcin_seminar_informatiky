@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.6.33723.286
+VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadiciAlgoritmy", "RadiciAlgoritmy.csproj", "{66C09B61-544E-4DBA-BFC6-B7B70825C6AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiciAlgoritmy", "RadiciAlgoritmy.csproj", "{0DE4CF37-0822-48C8-A9EB-E0C3C832FDDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,23 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{66C09B61-544E-4DBA-BFC6-B7B70825C6AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66C09B61-544E-4DBA-BFC6-B7B70825C6AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66C09B61-544E-4DBA-BFC6-B7B70825C6AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66C09B61-544E-4DBA-BFC6-B7B70825C6AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17F1BF76-546B-4BDA-BA58-32BC1A85825E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17F1BF76-546B-4BDA-BA58-32BC1A85825E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17F1BF76-546B-4BDA-BA58-32BC1A85825E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17F1BF76-546B-4BDA-BA58-32BC1A85825E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{80B8AF4B-5B97-4418-BCCD-443E25214A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80B8AF4B-5B97-4418-BCCD-443E25214A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80B8AF4B-5B97-4418-BCCD-443E25214A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80B8AF4B-5B97-4418-BCCD-443E25214A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DE4CF37-0822-48C8-A9EB-E0C3C832FDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE4CF37-0822-48C8-A9EB-E0C3C832FDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE4CF37-0822-48C8-A9EB-E0C3C832FDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE4CF37-0822-48C8-A9EB-E0C3C832FDDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1C1E0C80-EB24-47E6-801F-E37A54503A6E}
+		SolutionGuid = {2F261092-B68A-4FBF-87C2-0283F94CBB55}
 	EndGlobalSection
 EndGlobal

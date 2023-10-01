@@ -1,43 +1,38 @@
-﻿namespace RadiciAlgoritmy;
+﻿using System;
 
-internal class Program
+namespace RadiciAlgoritmy
 {
-    static void Main(string[] args)
+    internal class Program
     {
-        // Výjimky
+        static void Main(string[] args)
         {
-            // Vyjimky.CoJeToVyjimka();
-            // Vyjimky.TypyVyjimek();
-            // Vyjimky.VyhazovaniVyjimek();
-            // Vyjimky.OdchytavaniVyjimek();
-        }
+            // Vyhledavani zaznamu - samostatný úkol
+            {
+                // VyhledavaniUkol.TestovaciFunkce();
+            }
 
-        // Vyhledavani zaznamu - samostatný úkol
-        {
-            // VyhledavaniUkol.TestovaciFunkce();
-        }
+            // Výměna prvků pole - samostatný úkol
+            {
+                // VymenaPrvkuUkol.TestovaciFunkce();
+            }
 
-        // Výměna prvků pole - samostatný úkol
-        {
-            // VymenaPrvkuUkol.TestovaciFunkce();
-        }
+            // Řazení - je seřazeno - samostatný úkol
+            {
+                // RazeniTestUkol.TestovaciFunkce();
+            }
 
-        // Řazení - je seřazeno - samostatný úkol
-        {
-            // RazeniTestUkol.TestovaciFunkce();
-        }
+            // Zadání pole libovolné délky uživatelem - funkce split - samostatný úkol
+            {
+                // ZadejPoleUkol.ZadejPole();
+            }
 
-        // Zadání pole libovolné délky uživatelem - funkce split - samostatný úkol
-        {
-            // ZadejPoleUkol.ZadejPole();
-        }
+            // Řazení - algoritmus buble sort
+            {
+                // BubbleSortUkol.TestovaciFunkce();
+            }
 
-        // Řazení - algoritmus buble sort
-        {
-            // BubbleSortUkol.TestovaciFunkce();
+            Console.WriteLine("Stiskni libovolnou klávesu na ukončení programu.");
+            Console.ReadKey();
         }
-
-        Console.WriteLine("Stiskni libovolnou klávesu na ukončení programu.");
-        Console.ReadKey();
     }
 }
