@@ -163,18 +163,18 @@ namespace Ordinace
             Console.WriteLine($"Pocet pacientu v kategorii obezita: {pocetObezita}.");
         }
 
-        private static string kartotekaSoubor = "kartoteka.txt";
+        private static string kartotekaCesta = "kartoteka.txt";
 
         private static void UlozPacienta(Pacient pacient)
         {
             var pacientText = $"{pacient.Jmeno}/{pacient.Vaha}/{pacient.Vyska}/{pacient.Vek}";
 
-            File.AppendAllText(kartotekaSoubor, pacientText);
+            File.AppendAllText(kartotekaCesta, pacientText);
         }
 
         private static void PrectiPacienty()
         {
-            foreach (var radek in File.ReadAllLines(kartotekaSoubor))
+            foreach (var radek in File.ReadAllLines(kartotekaCesta))
             {
                 kontejnerPacientu.Add(PrectiPacienta(radek));
             }
