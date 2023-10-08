@@ -7,6 +7,14 @@ namespace RadiciAlgoritmy
     {
         static void Main(string[] args)
         {
+            // Řadící (třídící, anglicky sorting) algoritmy slouží k seřazení vstupních dat v kolekci vzestupně nebo sestupně.
+            // Z dnešního pohledu jsou to dost low-level algoritmy, které se ručně moc neprogramují. Naprostá většina programovacích jazyků
+            // má řazení vyřešeno ve standartní knihovně. 
+            // Ve výuce programování ale mají řadící algoritmy stále své místo, např. při výuce složitostí algoritmů. 
+
+            // Pro spoustu algoritmů je mít seřazená vstupní data důležité, např. pokud chceme vyhledávat v seznamu, práce s seřazeným polem
+            // nám ušetří spoustu práce.
+
             Console.WriteLine("Pole k seřazení: ");
             var poleKSerazeni = VytvorPoleKSerazeni();
             VypisListPoli(poleKSerazeni);
