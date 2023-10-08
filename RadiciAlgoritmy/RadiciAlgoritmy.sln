@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiciAlgoritmy", "RadiciAlgoritmy.csproj", "{0DE4CF37-0822-48C8-A9EB-E0C3C832FDDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiciAlgoritmy", "RadiciAlgoritmy.csproj", "{F679E4C1-7B64-48D4-9F07-781FCF81610E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0DE4CF37-0822-48C8-A9EB-E0C3C832FDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DE4CF37-0822-48C8-A9EB-E0C3C832FDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DE4CF37-0822-48C8-A9EB-E0C3C832FDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DE4CF37-0822-48C8-A9EB-E0C3C832FDDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F679E4C1-7B64-48D4-9F07-781FCF81610E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F679E4C1-7B64-48D4-9F07-781FCF81610E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F679E4C1-7B64-48D4-9F07-781FCF81610E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F679E4C1-7B64-48D4-9F07-781FCF81610E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2F261092-B68A-4FBF-87C2-0283F94CBB55}
+		SolutionGuid = {622E0418-A900-40A4-9DD1-A7A3D8F5C673}
 	EndGlobalSection
 EndGlobal
