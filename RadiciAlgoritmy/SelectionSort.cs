@@ -11,7 +11,7 @@
             }
         }
 
-        public static int NajdiIndexNejmensihoPrvku(int[] pole, int pocatecniIndex)
+        private static int NajdiIndexNejmensihoPrvku(int[] pole, int pocatecniIndex)
         {
             var indexNejmensihoPrvku = pocatecniIndex;
 
