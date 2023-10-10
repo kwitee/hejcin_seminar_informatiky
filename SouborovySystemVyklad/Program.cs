@@ -44,17 +44,26 @@ namespace SouborovySystemVyklad
                 // Zjisti, zda soubor na dané cestě existuje
                 bool souborExistuje = File.Exists("soubor.txt");
 
+                // Smaž soubor na dané cestě
+                File.Delete("soubor.txt");
+
                 // Přečti soubor po řádcích do pole řetězců
                 string[] radkySouboru =  File.ReadAllLines("soubor.txt");
 
                 // Přečti soubor jako jeden řetězec
                 string obsahSouboru = File.ReadAllText("soubor.txt");
 
-                // Otevři soubor a přidej na jeho konec další text
+                // Otevři soubor a přidej na jeho konec další text (pokud soubor neexistuje, bude vytvořen)
                 File.AppendAllText("soubor.txt", "Poznámka na konec");
 
-                // Otevři soubor a přidej na jeho konec další řádky definované polem řetězců
+                // Otevři soubor a přidej na jeho konec další řádky definované polem řetězců (pokud soubor neexistuje, bude vytvořen)
                 File.AppendAllLines("soubor.txt", new string[] {"Řádek1", "Řádek2"});
+
+                // Otevři soubor a zapiš do něj text (pokud soubor neexistuje, bude vytvořen; pokud existuje, bude přepsán)
+                File.WriteAllText("soubor.txt", "Obsah souboru");
+
+                // Otevři soubor a zapiš do něj řádky (pokud soubor neexistuje, bude vytvořen; pokud existuje, bude přepsán)
+                File.WriteAllLines("soubor.txt", new string[] { "Řádek1", "Řádek2" });
             }
 
             // Práce s adresáři v C#
