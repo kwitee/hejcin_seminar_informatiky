@@ -15,6 +15,10 @@ namespace RadiciAlgoritmy
             // Pro spoustu algoritmů je mít seřazená vstupní data důležité, např. pokud chceme vyhledávat v seznamu, práce s seřazeným polem
             // nám ušetří spoustu práce.
 
+            // Vlastnoti třídících algoritmů:
+            // Stabilita: prvky stejné velikosti si zachovají svoje původní řazení.
+            // Adaptabilita: pokud jsou vstupní data předřazena, proběhne menší počet operací a algoritmus je rychlejší.
+
             Console.WriteLine("Pole k seřazení: ");
             var poleKSerazeni = VytvorPoleKSerazeni();
             VypisListPoli(poleKSerazeni);
