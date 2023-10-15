@@ -28,7 +28,7 @@ namespace RadiciAlgoritmy
             VypisJsouPoleSerazena(poleKSerazeni);
 
             Console.WriteLine();
-            Console.WriteLine("Vyber radici algoritmus (B - bubble sort, S - selection sort):");
+            Console.WriteLine("Vyber radici algoritmus (B - bubble sort, S - selection sort, I - insertion sort, Q - quick sort):");
 
             while (true)
             {
@@ -54,6 +54,30 @@ namespace RadiciAlgoritmy
                     foreach (var pole in poleKSerazeni)
                     {
                         SelectionSort.SeradPrvky(pole);
+                    }
+
+                    break;
+                }
+                else if (vybranyAlgoritmus == "I")
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Řazení pole algoritmem insertion sort.");
+
+                    foreach (var pole in poleKSerazeni)
+                    {
+                        InsertionSort.SeradPrvky(pole);
+                    }
+
+                    break;
+                }
+                else if (vybranyAlgoritmus == "Q")
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Řazení pole algoritmem quick sort.");
+
+                    foreach (var pole in poleKSerazeni)
+                    {
+                        QuickSort.SeradPrvky(pole);
                     }
 
                     break;
