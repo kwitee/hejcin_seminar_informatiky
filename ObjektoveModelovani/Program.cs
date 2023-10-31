@@ -23,6 +23,7 @@ namespace ObjektoveModelovani
         }
     }
 
+    // Třída reprezentující vlasnosti tvora
     public class Vlastnosti
     {
         public int Sila { get; }
@@ -36,7 +37,8 @@ namespace ObjektoveModelovani
         public int Charisma { get; }
     }
 
-    public abstract class Tvor
+    // Každý tvor má vlastnosti (kompozice), aktuální a maximální počet životů
+    public class Tvor
     {
         public Tvor(Vlastnosti vlastnosti)
         {
@@ -50,6 +52,7 @@ namespace ObjektoveModelovani
 
         public int AktualniPocetZivotu { get; private set; }
 
+        // Jednoduchá logika pro zranění tvora
         public void DejZraneni(int zraneni)
         {
             AktualniPocetZivotu -= zraneni;
@@ -60,6 +63,7 @@ namespace ObjektoveModelovani
             }
         }
 
+        // Jednoduchá logika pro léčení tvora
         public void DejLeceni(int leceni)
         {
             AktualniPocetZivotu += leceni;
@@ -71,8 +75,10 @@ namespace ObjektoveModelovani
         }
     }
 
+    // Každý dobrodruh je současně tvor, dobrodruh má navíc inventář, zkušenosti a úroveň
     public class Dobrodruh : Tvor
     {
+        // Musíme zde volat "bázový" konstruktor, tedy konstruktor třídy Tvor, ten vyžaduje vlasnosti
         public Dobrodruh(Vlastnosti vlastnosti, Inventar inventar) : base(vlastnosti)
         {
             Inventar = inventar;
@@ -94,8 +100,16 @@ namespace ObjektoveModelovani
         }
 
         public Inventar Inventar { get; }
+
+        // Jednoduchá logika pro přetížení. Vrací true, pokud má dobrodruh v inventáři více věcí, než unese.
+        public bool JePretizen()
+        {
+            return Inventar.CelkovaVaha > Vlasnosti.Sila * 10;
+        }
     }
 
+    // Monstrum je také tvor, má navíc zranění a dosah
+    // Komplexitu inventáře u tvorů úmyslně nemodelujeme
     public class Monstrum : Tvor
     {
         public Monstrum(Vlastnosti vlastnosti, int zraneni, double dosah) : base(vlastnosti)
@@ -109,6 +123,7 @@ namespace ObjektoveModelovani
         public double Dosah { get; }
     }
 
+    // Předmět představuje libovolnou věc, kterou může mít dobrodruh v inventáři. Má název, cenu a váhu.
     public class Predmet
     {
         public Predmet(string nazev, int cena, double vaha)
@@ -125,6 +140,7 @@ namespace ObjektoveModelovani
         public double Vaha { get; }
     }
 
+    // Zbraň je konkrétní ty předmětu. Může se použít k útoku jednou, nebo oběma rukami.
     public class Zbran : Predmet
     {
         public Zbran(string nazev, int cena, double vaha, int zraneni, double dosah, bool jednorucni)
@@ -142,6 +158,8 @@ namespace ObjektoveModelovani
         public bool Jednorucni { get;}
     }
 
+    // Inventář je seznam předmětů, které ma dobrodruh u sebe. Udržuje vnitřní konzistenci pomocí zapouzdření.
+    // Používá polymorfismus, protože předměty mohou být různého typu.
     public class Inventar
     {
         private List<Predmet> predmety = new List<Predmet>();
@@ -149,30 +167,13 @@ namespace ObjektoveModelovani
         public void PridatPredmet(Predmet predmet)
         {
             predmety.Add(predmet);
+
+            CelkovaCena += predmet.Cena;
+            CelkovaVaha += predmet.Vaha;
         }
 
-        public int DejCelkovouCenu()
-        {
-            var celkovaCena = 0;
+        public int CelkovaCena { get; private set; }
 
-            foreach (var predmet in predmety)
-            {
-                celkovaCena += predmet.Cena;
-            }
-
-            return celkovaCena;
-        }
-
-        public double DejCelkovouVahu()
-        {
-            var celkovaVaha = 0.0;
-
-            foreach (var predmet in predmety)
-            {
-                celkovaVaha += predmet.Vaha;
-            }
-
-            return celkovaVaha;
-        }
+        public double CelkovaVaha { get; private set; }
     }
 }
