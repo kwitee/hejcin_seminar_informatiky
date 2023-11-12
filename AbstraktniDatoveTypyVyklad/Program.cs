@@ -13,8 +13,11 @@ namespace AbstraktniDatoveTypyVyklad
 
                 // Základní ADT:
                 // Seznam (list)
+                // Dynamické pole (dynamic array)
                 // Zásobník (stack)
                 // Fronta (queue)
+
+                // Další ADT:
                 // Halda (heap)
                 // Mapa (map)
                 // Množina (set)
@@ -37,7 +40,30 @@ namespace AbstraktniDatoveTypyVyklad
                 // Přečtení hodnoty prvku na libovolném indexu
                 // Odebrání prvku na libovolném indexu
 
-                // V C# je seznam implementován pomocí třídy List<T> z jmenného prostoru System.Collections.Generic
+                // Složitosti operací:
+                // Vložení prvku na konec: O(1).
+                // Přečtení prvku na indexu: O(n).
+
+                // V C# je lineární seznam implementován pomocí třídy LinkedList<T> z jmenného prostoru System.Collections.Generic.
+                var list = new LinkedList<int>();
+            }
+
+            // Dynamické pole (dynamic array)
+            {
+                // Dynamické pole je velmi podobné seznamu. Má stejné operace, ale je implementováno pomocí statického pole,
+                // které se rozšiřuje, případně zmenšuje, dle potřeby.
+
+                // V C# se pro změnu velikosti pole používá metoda Array.Resize(). Tato metoda vytvoří nové pole a zkopíruje do něj
+                // prvky z původního pole. Proto je tato operace pomalá a je vhodné ji používat pouze v případě, že je to nezbytně nutné.
+
+                // K tomuto účelu slouží parametr kapacita, který určuje velikost pole na začátku a také rychlost růstu (ta bude
+                // většinou kvadratická, tedy velikost pole se bude zdvojnásobovat).
+
+                // Složitosti operací:
+                // Vložení prvku na konec: O(1), pokud je dostatečná kapacita, jinak O(n).
+                // Přečtení prvku na indexu: O(1).
+
+                // V C# je dynamické pole implementováno pomocí třídy List<T> z jmenného prostoru System.Collections.Generic.
                 var list = new List<int>();
                 list.Add(5); // Vložení prvku na konec seznamu
                 var hodnota = list[0]; // Přečtení hodnoty prvku na libovolném indexu
