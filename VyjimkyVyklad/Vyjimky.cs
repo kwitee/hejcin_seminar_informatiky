@@ -7,7 +7,12 @@ namespace VyjimkyVyklad
     {
         public static void CoJeToVyjimka()
         {
-            // Výjimka prostředek pro komunikaci chyb nebo nepředvýdatelných stavů
+            // Výjimka prostředek pro komunikaci chyb nebo nepředvýdatelných stavů.
+            // Signalizujeme, že program za těchto okolností nemůže pokračovat, nebo že nemůžeme
+            // vrátit smysluplnou hodnotu výpočtu.
+
+            // Výjimky se reprezentují pomocí instancí třídy Exception, nebo jeho potomků (dědičnost).
+
             // Příklad:
             // Co by měl program vrátit při celočíselném dělení nulou?
             var delitel = 0;
@@ -21,9 +26,7 @@ namespace VyjimkyVyklad
 
         public static void TypyVyjimek()
         {
-            // Výjimek je mnoho typů, typ výjimky se používá k popsání oblasti problému
-            // Typy výjimek
-            // Pokud si nejsme jisti typem, vždy můžeme použít základní typ Exception
+            // Výjimek je mnoho typů (potomků třídy Exception), typ výjimky se používá k popsání oblasti problému.
 
             new Exception();
 
@@ -42,16 +45,27 @@ namespace VyjimkyVyklad
 
         public static void VyhazovaniVyjimek()
         {
-            // Pokud chceme signalizovat vyjímku, musíme ji tzn. vyhodit
-            // Používáme klíčové slovo throw:
+            // Pokud chceme signalizovat vyjímku, musíme ji tzv. vyhodit.
+            // Při vyhození výjimky program okamžitě přestane vykonávat kód v daném bloku (protože jsme signalizovali,
+            // že nemůžeme pokračovat).
+
+            // Používáme klíčové slovo throw + instance třídy Exception (nebo jeho potomka).
 
             throw new ArgumentException("Zadaná hodnota musí být větší než 0.");
         }
 
         public static void OdchytavaniVyjimek()
         {
-            // Vyjimky lze "odchytávat" pomocí bloku try-catch
-            // POZOR: každá neodchycená výjimka vede k předčasnému ukončení programu!
+            // Vyjimky lze "odchytávat" pomocí bloku try-catch (zkus provést následující kód).
+
+            // POZOR: každá neodchycená výjimka vede k předčasnému ukončení programu! To ale někdy chceme,
+            // ne každá výjimka je možná korektně ošetřit.
+
+            // Např. OutOfMemoryException signalizuje, že našemu programu došla paměť. Není mnoho věcí, co bychom
+            // mohli uvnitř programu dělat, abychom tuto situaci vyřešili.
+
+            // Výjimku si tedy můžeme i představit jako skok na nejbližší catch blok (ve smyslu toku programu) -
+            // pokud neexistuje, program je ukončen.
 
             // Příkladem zpracování výjimky může být např. informace pro uživatele, že jeho zadaná hodnota je špatná
             // a že musí hodnotu zadat znovu.
