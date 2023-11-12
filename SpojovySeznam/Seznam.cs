@@ -38,16 +38,16 @@ namespace SpojovySeznam
         // Pokud je seznam prázdný nebo nemá dostatek prvků, vyhoď výjimku pomocí throw new IndexOutOfRangeException();
         private Prvek<T> NajdiPrvek(int index)
         {
-            if (prvniPrvek == null)
+            if (index < 0)
             {
-                throw new IndexOutOfRangeException("Seznam je prázdný.");
+                throw new IndexOutOfRangeException("Index je menší než 0.");
             }
 
             var aktualniPrvek = prvniPrvek;
 
             for (int i = 0; i < index; i++)
             {
-                if (aktualniPrvek.Dalsi == null)
+                if (aktualniPrvek == null)
                 {
                     throw new IndexOutOfRangeException("Index je větší než počet prvků v seznamu.");
                 }
@@ -67,15 +67,10 @@ namespace SpojovySeznam
         // Vrátí počet prvků v seznamu
         public int DejPocetPrvku()
         {
-            if (prvniPrvek == null)
-            {
-                return 0;
-            }
-
+            var pocetPrvku = 0;
             var aktualniPrvek = prvniPrvek;
-            var pocetPrvku = 1; // Musíme započítat i první prvek
 
-            while (aktualniPrvek.Dalsi != null)
+            while (aktualniPrvek != null)
             {
                 aktualniPrvek = aktualniPrvek.Dalsi;
                 pocetPrvku++;
@@ -87,16 +82,26 @@ namespace SpojovySeznam
         // Smaže prvek na indexu
         public void VymazPrvek(int index)
         {
-            var prvek = NajdiPrvek(index);
+            var mazanyPrvek = NajdiPrvek(index);
 
-            if (prvek == prvniPrvek)
+            // Pokud je mazaný prvek první, tak na něj jiné prvky neodkazují
+            // Proto pouze změníme referenci na první prvek
+            if (mazanyPrvek == prvniPrvek)
             {
                 prvniPrvek = prvniPrvek.Dalsi;
             }
             else
             {
+                // Pokud je mazaný prvek jinde než na začátku, tak musíme provázat předchozí prvek s následujícím
+                // Následující prvek může být null, ale to klidně provázat můžeme
                 var predchoziPrvek = NajdiPrvek(index - 1);
-                predchoziPrvek.Dalsi = prvek.Dalsi;
+                predchoziPrvek.Dalsi = mazanyPrvek.Dalsi;
+
+                // Pokud je mazaný prvek současně posledním prvkem, musíme provázat poslední prvek
+                if (mazanyPrvek == posledniPrvek)
+                {
+                    posledniPrvek = predchoziPrvek;
+                }
             }
         }
     }
