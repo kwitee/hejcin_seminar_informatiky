@@ -1,0 +1,62 @@
+1) Přidejte na formulář 4 komponenty TextBox, přes které bude možné nastavovat 4 parametry algoritmu (xMin, xMax, yMin, yMax).
+    Nastavte defaultní hodnoty do komponent (X min = -2,5; X max = 1; Y min = -1; Y max = 1).
+
+    Nápověda:
+        Nezapomeňte, že hodnota z text boxu je typu string a je nutné ji přetypovat, např. pomocí double.Parse().
+
+2) Přidelte na formulář spodní lištu (status strip), jehož součástí bude progress bar a label.
+    Label by měl obsahovat následující texty: "Výpočet fraktálu" a "Výpočet fraktálu byl dokončen".
+    Hodnota progress baru by se měla upravovat v průběhu vykreslování.
+
+    Nápověda: 
+        Maximální hodnota progress baru je 100, takže můžeme např. pro každý sloupec (x) vyhodnotit, kolik procent sloupců již bylo vykresleno.
+        Při velmi rychlých změnách se status strip label nepřekresluje, volejte metodu statusStrip.Update(), abyste vynutili překreslení.
+
+3) Opravte chybu, která vznikne při změně velikosti okna - fraktál by se měl v této situaci znovu překreslit.
+    Velikost komponent lze kotvit pomocí vlastnosti Anchor.
+
+    Nápověda: 
+        Můžete použít událost PictureBox.SizeChanged - snížení responsivnosti okna :(
+        Nebo Form.ResizeEnd - nereaguje na maximalizaci okna :(
+
+4) Přidejte možnost uložení výsledného fraktálu do souboru.
+    Komponenta MenuStrip: Soubor -> Uložit obrázek.
+    Použijte FileSaveDialog pro výběr cesty (Filter: "Bitmap (*.bmp)|*.bmp").
+    Uložte soubor pouze v případě, že je result dialogu OK.
+    Pokud dojde k uložení, upravte status strip label hodnotu na "Soubor uložen".
+
+    Nápověda:
+        Dialog se zobrazuje metodou Show(), ta vrací objekt Result poté, co je dialog uživatelem uzavřen.
+        Třída BitMap má metodu Save().
+
+5) Přidejte možnost načtení parametru fraktálu ze souboru.
+    Komponenta MenuStrip: Soubor -> Načíst parametry.
+    Použijte OpenFileDialog pro výběr cesty k txt souboru (Filter: "Textový soubor (*.txt)|*.txt").
+    Parsujte soubor pouze v případě, že je result dialogu OK.
+    Txt soubor by měl obsahovat 4 parametry algoritmu oddělené středníkem (xMin, xMax, yMin, yMax).
+    Pokud při parsování souboru dojde k chybě, odchyťte ji a zobrazte ji pomocí dialogu MessageBox.
+    Mělo by automaticky dojít k překreslení fraktálu.
+    Ukázkové pozice jsou v adresáři pozice.
+
+6) Přidejte možnost uložení aktuální parametrů do souboru.
+    Komponenta MenuStrip: Soubor -> Uložit parametry.
+    Použijte FileSaveDialog pro výběr cesty (Filter: "Textový soubor (*.txt)|*.txt").
+    Uložte soubor pouze v případě, že je result dialogu OK.
+    Pokud dojde k uložení, upravte status strip label hodnotu na "Parametry uloženy".
+
+7) Přidejte na status strip další label a do něj vykreslujte aktuální souřadnice X a Y.
+    Použijte událost PictureBox.MouseMove (MouseEventArgs drží informaci o aktuální poloze kurzoru).
+
+    Nápověda:
+        Souřadnice polohy kurzoru jsou vztaženy k komponentě PictureBox, musíme je převést do našeho souřadnicového prostoru
+        Xmin - Xmax a Ymin - Ymax. 
+
+8) Naprogramujte zoom fraktálu po dvojitém kliku na PictureBox.
+    Použijte událost PictureBox.MouseDoubleClick.
+
+    Nápověda:
+        Stejně jako v bodě 7 je nutné převést souřadnice. Bod do kterého uživatel kliknul by měl být nový střed pro X i Y souřadnice.
+        Ze středu můžeme vypočítat min a max souřadnice a vynásobit je nějakým faktorem přiblížení (např. 0.5 na 2x zoom).
+
+9) Upravte zoom logiku z bodu 8. Pravý dvouklik fraktál přibližuje, levý oddaluje.
+    MouseEventArgs drží informaci o tom, jakým tlačítkem uživatel kliknul.
